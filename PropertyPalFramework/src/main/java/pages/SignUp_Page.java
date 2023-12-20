@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignUp_Page {
@@ -28,7 +29,18 @@ public class SignUp_Page {
 	By passwordConfirmInput = By.xpath("//input[@id='passwordConfirm']");
 	By termsCheckBox = By.xpath("//input[@id='terms']");
 	By signUpSubmitButton = By.xpath("//p[contains(text(), 'Sign up with your email')]/..");
+	By agreeButton = By.xpath("//span[contains(text(), 'AGREE')]/..");
 	By passwordInputField = By.xpath("//input[@id='password']");
+	
+	
+	
+	
+	public void handleCookiePopup() throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(agreeButton));
+		driver.findElement(agreeButton).click();
+		}
+
 	
 	public void signUp() throws Exception {
 	
@@ -93,8 +105,10 @@ public class SignUp_Page {
 				driver.findElement(passwordConfirmInput).click();
 				driver.findElement(passwordConfirmInput).sendKeys(confirmPassword);
 				driver.findElement(termsCheckBox).click();
-				Thread.sleep(1000);
+				Thread.sleep(500);
 				driver.findElement(signUpSubmitButton).click();
+				Thread.sleep(1000);
+				
 	}
 
 

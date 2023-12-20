@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LogIn_Page {
@@ -20,6 +21,14 @@ public class LogIn_Page {
 	By emailInputField = By.xpath("//input[@id='email']");
 	By passwordInputField = By.xpath("//input[@id='password']");
 	By submitButton = By.xpath("//input[@id='email']/../../../..//form/..//button/p");
+	By agreeButton = By.xpath("//span[contains(text(), 'AGREE')]/..");
+	
+	
+	public void handleCookiePopup() throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(agreeButton));
+		driver.findElement(agreeButton).click();
+		}
 	
 	public void logIn(String email, String password) throws Exception {
 		driver.findElement(logInButtonDropDown).click();

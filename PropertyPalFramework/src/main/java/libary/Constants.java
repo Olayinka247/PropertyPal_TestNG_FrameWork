@@ -2,12 +2,12 @@ package libary;
 
 public class Constants {
 	public static final String URL = "https://www.propertypal.com";
-	public static final String EMAIL = "mikeaol@aol.com";
-	public static final String FIRST_NAME = "Mike";
-	public static final String LAST_NAME = "Nikel";
-	public static final String TELEPHONE = "12345678";
-	public static final String PASSWORD = "Joysugar123..";
-	public static final String CONFIRM_PASSWORD = "Joysugar123..";
+	public static final String EMAIL = "mikeao@aol.com";
+	public static final String FIRST_NAME = "Mic";
+	public static final String LAST_NAME = "Nikl";
+	public static final String TELEPHONE = "1234678";
+	public static final String PASSWORD = "Joysuga123..";
+	public static final String CONFIRM_PASSWORD = "Joysuga123..";
 	public static final String POSTCODE = "BT16";
 	public static final String[] CURRENCY = {"£","€"};
 	public static final String[] MIN_BED = {"Any","1 Bed min","2 Beds min","3 Beds min","4 Beds min","5 Beds min","6 Beds min"};
