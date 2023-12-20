@@ -33,14 +33,11 @@ public class LogIn_Page {
 	public void logIn(String email, String password) throws Exception {
 		driver.findElement(logInButtonDropDown).click();
 		driver.findElement(logInPage).click();
-		
 		driver.findElement(emailInputField).click();
-		
 		driver.findElement(emailInputField).click();
 		driver.findElement(emailInputField).sendKeys(email);
 		driver.findElement(passwordInputField).click();
 		driver.findElement(passwordInputField).sendKeys(password);
-		
 		driver.findElement(submitButton).click();
 		Thread.sleep(1000);
 		
