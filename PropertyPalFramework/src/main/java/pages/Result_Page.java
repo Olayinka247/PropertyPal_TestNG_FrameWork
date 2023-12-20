@@ -163,8 +163,9 @@ public class Result_Page {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(searchTitle));
 		}
 		
-		public void currencyAndPriceRangeOption(String currency, String minPrice, String maxPrice ) {
+		public void currencyAndPriceRangeOption(String currency, String minPrice, String maxPrice ) throws Exception {
 		driver.findElement(currencyFilter).click();
+		Thread.sleep(500);
 		List<WebElement> currencyOptions = driver.findElements(currencySign);
 		for (int i =0; i < currencyOptions.size(); i++) {
 			String text = currencyOptions.get(i).getText();
@@ -181,6 +182,7 @@ public class Result_Page {
 		for (int i = 0; i < minPriceOptions.size(); i++ ) {
 			String text = minPriceOptions.get(i).getText();
 			System.out.println(text);
+			
 			if(text.equals(minPrice)) {
 				minPriceOptions.get(i).click();
 				break;
@@ -194,6 +196,7 @@ public class Result_Page {
 		for (int i = 0; i < maxPriceOptions.size(); i++ ) {
 			String text = maxPriceOptions.get(i).getText();
 			System.out.println(text);
+			
 			if(text.equals(maxPrice)) {
 				maxPriceOptions.get(i).click();
 				break;
@@ -201,7 +204,7 @@ public class Result_Page {
 		}
 		}
 
-		public void selectABedroomFilter(String minBedOption, String maxBedOption) {
+		public void selectABedroomFilter(String minBedOption, String maxBedOption) throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		driver.findElement(bedFilterButton).click();
 		driver.findElement(minBedDropdown).click();
@@ -213,7 +216,6 @@ public class Result_Page {
 		for(int i=0; i < count; i++) {
 		String text = minBedOptions.get(i).getText();
 		System.out.println(text);
-
 		if(text.equals(minBedOption)) {
 		minBedOptions.get(i).click();
 		break;
@@ -229,7 +231,6 @@ public class Result_Page {
 		for(int i=0; i < count1; i++) {
 		String text = maxBedOptions.get(i).getText();
 		System.out.println(text);
-
 		if(text.equals(maxBedOption)) {
 		maxBedOptions.get(i).click();
 		break;
