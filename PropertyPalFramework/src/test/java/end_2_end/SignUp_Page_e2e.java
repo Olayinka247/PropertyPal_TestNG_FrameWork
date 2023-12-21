@@ -20,11 +20,13 @@ public class SignUp_Page_e2e {
 	
 	
 	@BeforeMethod
-	public void setup() {
+	public void setup() throws Exception {
 		driver = libary.BrowserLibary.launchBrowser("firefox");
 		driver.manage().window().maximize();
 		driver.get(Constants.URL);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		result = new SignUp_Page(driver);
+		result.handleCookiePopup();
 	}
 	
 	@AfterMethod
@@ -36,20 +38,10 @@ public class SignUp_Page_e2e {
 	}
 	
 	@Test
-	public void CheckUserCanSignUp_Testcase_001() throws Exception{
+ 	public void CheckUserCanSignUp_Testcase_001() throws Exception{
 		result = new SignUp_Page(driver);
-		result.handleCookiePopup();
 		result.signUp();
-		result.signUpInformation(Constants.EMAIL,Constants.FIRST_NAME,Constants.LAST_NAME,Constants.TELEPHONE, Constants.PASSWORD,Constants.CONFIRM_PASSWORD);
-		
-	}
-	
-	@Test
-	public void CheckUserAlreadyHasAnAccount_Testcase_001() throws Exception{
-		result = new SignUp_Page(driver);
-		result.handleCookiePopup();
-		result.signUp();
-		result.signUpInformation(Constants.EMAIL,Constants.FIRST_NAME,Constants.LAST_NAME,Constants.TELEPHONE, Constants.PASSWORD,Constants.CONFIRM_PASSWORD);
+		result.signUpInformation(Constants.EMAIL[0],Constants.FIRST_NAME[0],Constants.LAST_NAME[0],Constants.TELEPHONE[0], Constants.PASSWORD[0],Constants.CONFIRM_PASSWORD[0]);
 		
 	}
 

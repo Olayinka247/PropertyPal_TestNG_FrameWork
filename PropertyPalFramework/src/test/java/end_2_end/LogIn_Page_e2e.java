@@ -21,11 +21,13 @@ public class LogIn_Page_e2e {
 	
 	
 	@BeforeMethod
-	public void setup() {
+	public void setup() throws Exception {
 		driver = libary.BrowserLibary.launchBrowser("firefox");
 		driver.manage().window().maximize();
 		driver.get(Constants.URL);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		result = new LogIn_Page(driver);
+		result.handleCookiePopup();
 	}
 	
 	@AfterMethod
@@ -39,8 +41,7 @@ public class LogIn_Page_e2e {
 	@Test
 	public void ConfirmUserCanLogIn_Testcase_001() throws Exception{
 		result = new LogIn_Page(driver);
-		result.handleCookiePopup();
-		result.logIn(Constants.EMAIL, Constants.PASSWORD);
+		result.logIn(Constants.EMAIL[0], Constants.PASSWORD[0]);
 		Thread.sleep(1000);
 		
 	}

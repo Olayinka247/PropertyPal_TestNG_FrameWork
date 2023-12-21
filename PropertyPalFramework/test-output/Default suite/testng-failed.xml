@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="end_2_end.Result_Page_e2e">
+      <class name="regression.LogIn_Page_regression">
         <methods>
-          <include name="CheckFor5Beds_Testcase_003"/>
+          <include name="ConfirmInCorrectLogIn_Testcase_003"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- end_2_end.Result_Page_e2e -->
+      </class> <!-- regression.LogIn_Page_regression -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
