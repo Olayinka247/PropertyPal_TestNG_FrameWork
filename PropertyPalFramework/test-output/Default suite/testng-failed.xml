@@ -6,9 +6,7 @@
       <class name="end_2_end.Result_Page_e2e">
         <methods>
           <include name="CheckFor5Beds_Testcase_003"/>
-          <include name="CheckFor3Beds_Testcase_002"/>
           <include name="setup"/>
-          <include name="CheckFor2Beds_Testcase_001"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- end_2_end.Result_Page_e2e -->

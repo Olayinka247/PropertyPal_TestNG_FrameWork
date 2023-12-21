@@ -1,5 +1,7 @@
 package pages;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -280,14 +282,12 @@ public class Result_Page {
 		String text = resultList.get(i).getText();
 
 		boolean status = text.contains(bedResult);
+		assertTrue(status);
 
 		System.out.println(status);
 		}
 		}
 		
-		public void closeTab() {
 		
-			driver.quit();
-		}
 
 }
