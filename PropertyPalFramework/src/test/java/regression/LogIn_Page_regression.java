@@ -38,14 +38,27 @@ public class LogIn_Page_regression {
 	}
 	
 	@Test
-	public void ConfirmUserEmail_Testcase_001() throws Exception{
+	public void ConfirmUserWrongEmail_Testcase_001() throws Exception{
 		result = new LogIn_Page(driver);
 		result.checkEmail(Constants.EMAIL[0]);
-		result.checkEmailValue("mik@aol.com");
+		result.checkEmailValue(Constants.EMAIL[1]);
+	}
+	@Test
+	public void ConfirmUserCorrectEmail_Testcase_002() throws Exception{
+		result = new LogIn_Page(driver);
+		result.checkEmail(Constants.EMAIL[0]);
+		result.checkEmailValue(Constants.EMAIL[0]);
 	}
 	
 	@Test
-	public void ConfirmEmailTakesAphabet_Testcase_002() throws Exception{
+	public void ConfirmValidEMailFormat_Testcase_003() {
+		result = new LogIn_Page(driver);
+		result.checkEmail(Constants.EMAIL[0]);
+		result.validateEmailFormat();
+	}
+	
+	@Test
+	public void ConfirmEmailTakesAphabet_Testcase_003() throws Exception{
 		result = new LogIn_Page(driver);
 		result.checkEmail(Constants.EMAIL[0]);
 		result.checkEmailValue(Constants.EMAIL[0]);

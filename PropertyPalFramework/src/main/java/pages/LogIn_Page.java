@@ -1,6 +1,7 @@
 package pages;
 
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -66,9 +67,18 @@ public class LogIn_Page {
 	}
 	
 	public void checkLogInErrorMessage() {
-		
 		WebElement errorMessage = driver.findElement(ErroMessage);
 		assertTrue(errorMessage.isDisplayed());
 	}
+	
+public void validateEmailFormat() {
+		
+		WebElement emailInput = driver.findElement(emailInputField);
+		String TextData = emailInput.getAttribute("value");
+		boolean status = TextData.contains("@");
+		assertTrue(status);
+}
+	
+	
 
 }
