@@ -24,6 +24,7 @@ public class LogIn_Page_regression {
 		driver = libary.BrowserLibary.launchBrowser("firefox");
 		driver.manage().window().maximize();
 		driver.get(Constants.URL);
+		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		result = new LogIn_Page(driver);
 		result.handleCookiePopup();
@@ -41,7 +42,7 @@ public class LogIn_Page_regression {
 	public void ConfirmUserWrongEmail_Testcase_001() throws Exception{
 		result = new LogIn_Page(driver);
 		result.checkEmail(Constants.EMAIL[0]);
-		result.checkEmailValue(Constants.EMAIL[1]);
+		result.checkEmailValue(Constants.EMAIL[0]);
 	}
 	@Test
 	public void ConfirmUserCorrectEmail_Testcase_002() throws Exception{
@@ -58,16 +59,16 @@ public class LogIn_Page_regression {
 	}
 	
 	@Test
-	public void ConfirmEmailTakesAphabet_Testcase_003() throws Exception{
+	public void ConfirmEmailTakesAphabet_Testcase_004() throws Exception{
 		result = new LogIn_Page(driver);
 		result.checkEmail(Constants.EMAIL[0]);
 		result.checkEmailValue(Constants.EMAIL[0]);
 	}
 	
 	@Test
-	public void ConfirmErrorMsgForInvalidData_Testcase_003() throws Exception {
+	public void ConfirmErrorMsgForInvalidData_Testcase_005() throws Exception {
 		result = new LogIn_Page(driver);
-		result.logIn(Constants.EMAIL[0], Constants.PASSWORD[0]);
+		result.logIn(Constants.EMAIL[0], Constants.PASSWORD[1]);
 		result.checkLogInErrorMessage();
 	}
 	

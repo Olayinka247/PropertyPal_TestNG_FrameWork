@@ -5,7 +5,7 @@
     <classes>
       <class name="regression.LogIn_Page_regression">
         <methods>
-          <include name="ConfirmValidEMailFormat_Testcase_003"/>
+          <include name="ConfirmErrorMsgForInvalidData_Testcase_005"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>

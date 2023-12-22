@@ -41,7 +41,7 @@ public class SignUp_Page_e2e {
  	public void CheckUserCanSignUp_Testcase_001() throws Exception{
 		result = new SignUp_Page(driver);
 		result.signUp();
-		result.signUpInformation(Constants.EMAIL[0],Constants.FIRST_NAME[0],Constants.LAST_NAME[0],Constants.TELEPHONE[0], Constants.PASSWORD[0],Constants.CONFIRM_PASSWORD[0]);
+		result.signUpInformation(Constants.EMAIL[2],Constants.FIRST_NAME[2],Constants.LAST_NAME[2],Constants.TELEPHONE[2], Constants.PASSWORD[2],Constants.CONFIRM_PASSWORD[2]);
 		
 	}
 

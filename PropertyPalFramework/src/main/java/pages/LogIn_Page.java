@@ -27,7 +27,7 @@ public class LogIn_Page {
 	By passwordInputField = By.xpath("//input[@id='password']");
 	By submitButton = By.xpath("//input[@id='email']/../../../..//form/..//button/p");
 	By agreeButton = By.xpath("//span[contains(text(), 'AGREE')]/..");
-	By ErroMessage = By.xpath("//p[contains(text(), 'Sorry')]");
+	By ErroMessages = By.xpath("//p[contains(text(), 'Sorry')]");
 	
 	
 	public void handleCookiePopup() throws Exception {
@@ -44,6 +44,7 @@ public class LogIn_Page {
 		driver.findElement(passwordInputField).click();
 		driver.findElement(passwordInputField).sendKeys(password);
 		driver.findElement(submitButton).click();
+		
 		Thread.sleep(1000);
 		
 	}
@@ -67,7 +68,7 @@ public class LogIn_Page {
 	}
 	
 	public void checkLogInErrorMessage() {
-		WebElement errorMessage = driver.findElement(ErroMessage);
+		WebElement errorMessage = driver.findElement(ErroMessages);
 		assertTrue(errorMessage.isDisplayed());
 	}
 	

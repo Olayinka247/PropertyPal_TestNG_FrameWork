@@ -41,7 +41,7 @@ public class LogIn_Page_e2e {
 	@Test
 	public void ConfirmUserCanLogIn_Testcase_001() throws Exception{
 		result = new LogIn_Page(driver);
-		result.logIn(Constants.EMAIL[0], Constants.PASSWORD[0]);
+		result.logIn(Constants.EMAIL[2], Constants.PASSWORD[2]);
 		Thread.sleep(1000);
 		
 	}
