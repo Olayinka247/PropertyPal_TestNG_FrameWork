@@ -1,4 +1,4 @@
-package end_2_end;
+package regression;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,10 +11,9 @@ import org.testng.annotations.Test;
 import com.assertthat.selenium_shutterbug.core.Shutterbug;
 
 import libary.Constants;
-
 import pages.SignUp_Page;
 
-public class SignUp_Page_e2e {
+public class SignUp_Page_regression {
 	WebDriver driver;
 	SignUp_Page result;
 	
@@ -38,19 +37,12 @@ public class SignUp_Page_e2e {
 	}
 	
 	@Test
- 	public void CheckUserCanSignUp_Testcase_001() throws Exception{
-		result = new SignUp_Page(driver);
-		result.signUp();
-		result.signUpInformation(Constants.EMAIL[3],Constants.FIRST_NAME[3],Constants.LAST_NAME[1],Constants.TELEPHONE[1], Constants.PASSWORD[2],Constants.CONFIRM_PASSWORD[2]);
-		
-	}
-	
-	@Test
  	public void CheckUserAlreadySignedUp_Testcase_001() throws Exception{
 		result = new SignUp_Page(driver);
 		result.signUp();
 		result.signUpInformation(Constants.EMAIL[3],Constants.FIRST_NAME[3],Constants.LAST_NAME[1],Constants.TELEPHONE[1], Constants.PASSWORD[2],Constants.CONFIRM_PASSWORD[2]);
 		
 	}
+
 
 }

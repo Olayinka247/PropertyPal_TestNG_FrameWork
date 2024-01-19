@@ -42,7 +42,7 @@ public class LogIn_Page_regression {
 	public void ConfirmUserWrongEmail_Testcase_001() throws Exception{
 		result = new LogIn_Page(driver);
 		result.checkEmail(Constants.EMAIL[0]);
-		result.checkEmailValue(Constants.EMAIL[0]);
+		result.checkEmailValue(Constants.EMAIL[1]);
 	}
 	@Test
 	public void ConfirmUserCorrectEmail_Testcase_002() throws Exception{
