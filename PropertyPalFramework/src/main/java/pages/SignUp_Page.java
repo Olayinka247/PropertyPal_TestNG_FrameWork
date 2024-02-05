@@ -1,5 +1,6 @@
 package pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -36,7 +37,7 @@ public class SignUp_Page {
 	
 	
 	public void handleCookiePopup() throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(agreeButton));
 		driver.findElement(agreeButton).click();
 		}

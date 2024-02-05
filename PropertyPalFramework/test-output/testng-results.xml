@@ -1,32 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-19T23:40:47 GMT" name="Default suite" finished-at="2024-01-19T23:41:05 GMT" duration-ms="17195">
+  <suite started-at="2024-02-05T10:53:47 GMT" name="Default suite" finished-at="2024-02-05T10:54:44 GMT" duration-ms="57777">
     <groups>
     </groups>
-    <test started-at="2024-01-19T23:40:47 GMT" name="Default test" finished-at="2024-01-19T23:41:05 GMT" duration-ms="17195">
-      <class name="regression.SignUp_Page_regression">
-        <test-method is-config="true" signature="setup()[pri:0, instance:regression.SignUp_Page_regression@101952da]" started-at="2024-01-19T23:40:47 GMT" name="setup" finished-at="2024-01-19T23:40:57 GMT" duration-ms="9288" status="PASS">
+    <test started-at="2024-02-05T10:53:47 GMT" name="Default test" finished-at="2024-02-05T10:54:44 GMT" duration-ms="57777">
+      <class name="end_2_end.Result_Page_e2e">
+        <test-method is-config="true" signature="setup()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:53:47 GMT" name="setup" finished-at="2024-02-05T10:53:54 GMT" duration-ms="7205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="CheckUserAlreadySignedUp_Testcase_001()[pri:0, instance:regression.SignUp_Page_regression@101952da]" started-at="2024-01-19T23:40:57 GMT" name="CheckUserAlreadySignedUp_Testcase_001" finished-at="2024-01-19T23:41:04 GMT" duration-ms="7318" status="PASS">
+        <test-method signature="CheckFor2Beds_Testcase_001()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:53:54 GMT" name="CheckFor2Beds_Testcase_001" finished-at="2024-02-05T10:54:07 GMT" duration-ms="13422" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckUserAlreadySignedUp_Testcase_001 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:regression.SignUp_Page_regression@101952da]" started-at="2024-01-19T23:41:04 GMT" name="teardown" finished-at="2024-01-19T23:41:05 GMT" duration-ms="532" status="PASS">
+        </test-method> <!-- CheckFor2Beds_Testcase_001 -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:54:07 GMT" name="teardown" finished-at="2024-02-05T10:54:08 GMT" duration-ms="755" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CheckUserAlreadySignedUp_Testcase_001 status=SUCCESS method=SignUp_Page_regression.CheckUserAlreadySignedUp_Testcase_001()[pri:0, instance:regression.SignUp_Page_regression@101952da] output={null}]]]>
+                <![CDATA[[TestResult name=CheckFor2Beds_Testcase_001 status=SUCCESS method=Result_Page_e2e.CheckFor2Beds_Testcase_001()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- regression.SignUp_Page_regression -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:54:08 GMT" name="setup" finished-at="2024-02-05T10:54:14 GMT" duration-ms="5717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="CheckFor3Beds_Testcase_002()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:54:14 GMT" name="CheckFor3Beds_Testcase_002" finished-at="2024-02-05T10:54:29 GMT" duration-ms="14970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckFor3Beds_Testcase_002 -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:54:29 GMT" name="teardown" finished-at="2024-02-05T10:54:29 GMT" duration-ms="692" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CheckFor3Beds_Testcase_002 status=SUCCESS method=Result_Page_e2e.CheckFor3Beds_Testcase_002()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:54:29 GMT" name="setup" finished-at="2024-02-05T10:54:35 GMT" duration-ms="5395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="CheckFor5Beds_Testcase_003()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:54:35 GMT" name="CheckFor5Beds_Testcase_003" finished-at="2024-02-05T10:54:44 GMT" duration-ms="8839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckFor5Beds_Testcase_003 -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c]" started-at="2024-02-05T10:54:44 GMT" name="teardown" finished-at="2024-02-05T10:54:44 GMT" duration-ms="691" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CheckFor5Beds_Testcase_003 status=SUCCESS method=Result_Page_e2e.CheckFor5Beds_Testcase_003()[pri:0, instance:end_2_end.Result_Page_e2e@4f2b503c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- end_2_end.Result_Page_e2e -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

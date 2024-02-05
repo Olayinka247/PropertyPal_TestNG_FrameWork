@@ -1,5 +1,6 @@
 package end_2_end;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -24,7 +25,7 @@ public class Result_Page_e2e {
 		driver = libary.BrowserLibary.launchBrowser("firefox");
 		driver.manage().window().maximize();
 		driver.get(Constants.URL);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		result = new Result_Page(driver);
 		result.handleCookiePopup();
 	}

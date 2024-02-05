@@ -1,5 +1,6 @@
 package end_2_end;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -24,7 +25,7 @@ public class SignUp_Page_e2e {
 		driver = libary.BrowserLibary.launchBrowser("firefox");
 		driver.manage().window().maximize();
 		driver.get(Constants.URL);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		result = new SignUp_Page(driver);
 		result.handleCookiePopup();
 	}
@@ -41,7 +42,7 @@ public class SignUp_Page_e2e {
  	public void CheckUserCanSignUp_Testcase_001() throws Exception{
 		result = new SignUp_Page(driver);
 		result.signUp();
-		result.signUpInformation(Constants.EMAIL[3],Constants.FIRST_NAME[3],Constants.LAST_NAME[1],Constants.TELEPHONE[1], Constants.PASSWORD[2],Constants.CONFIRM_PASSWORD[2]);
+		result.signUpInformation(Constants.EMAIL[1],Constants.FIRST_NAME[2],Constants.LAST_NAME[2],Constants.TELEPHONE[3], Constants.PASSWORD[0],Constants.CONFIRM_PASSWORD[0]);
 		
 	}
 	

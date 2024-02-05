@@ -3,6 +3,8 @@ package pages;
 
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +16,7 @@ public class LogIn_Page {
 	
 	static WebDriver driver;
 	 WebDriverWait wait;
+	 
 	
 	public LogIn_Page(WebDriver driver) {
 		this.driver = driver;
@@ -30,7 +33,7 @@ public class LogIn_Page {
 	
 	
 	public void handleCookiePopup() throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(agreeButton));
 		driver.findElement(agreeButton).click();
 		}

@@ -2,6 +2,7 @@ package pages;
 
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -68,7 +69,7 @@ public class Result_Page {
 			
 	
 	public void handleCookiePopup() throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(agreeButton));
 		driver.findElement(agreeButton).click();
 		}
@@ -158,7 +159,7 @@ public class Result_Page {
 	}
 
 		public void searchForAPostCode(String postcode) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		driver.findElement(searchField).click();
 		driver.findElement(searchField).sendKeys(postcode);
 		driver.findElement(searchField).sendKeys(Keys.ENTER);
@@ -207,7 +208,7 @@ public class Result_Page {
 		}
 
 		public void selectABedroomFilter(String minBedOption, String maxBedOption) throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		driver.findElement(bedFilterButton).click();
 		driver.findElement(minBedDropdown).click();
 
@@ -259,7 +260,7 @@ public class Result_Page {
 		}
 		
 		public void clickSearch() {
-			WebDriverWait wait = new WebDriverWait(driver, 20);
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 			driver.findElement(searchButton).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(searchTitle));
 		}
@@ -276,7 +277,6 @@ public class Result_Page {
 
 		for (int i = 0; i < resultList.size(); i++) {
 
-		js.executeScript("arguments[0].scrollIntoView();", resultList.get(i));
 		Thread.sleep(500);
 
 		String text = resultList.get(i).getText();
